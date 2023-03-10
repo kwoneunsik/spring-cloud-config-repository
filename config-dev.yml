@@ -6,7 +6,7 @@ spring:
   datasource:
     driverClassName: org.h2.Driver
     #password: ENC(SIdxOSVy6APkNDemmgHTcw3fZVdFTFGy)
-    password: aaaa
+    password: '{cipher}5c34cf47a22616bb228e503efb5fe0397cb03e6a7006e532b3797f3c7ba93fcd'
     url: jdbc:h2:file:./testdb
     username: sa
 management:
