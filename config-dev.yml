@@ -17,14 +17,4 @@ spring:
         dialect: org.hibernate.dialect.H2Dialect
     show-sql: true
 
-      
-taeng:
-  profile: I'm dev taeng
-  comment: Hello! updated by Spring Bus with webhook!!
-  pwd: '{cipher}5c34cf47a22616bb228e503efb5fe0397cb03e6a7006e532b3797f3c7ba93fcd'
   
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh
