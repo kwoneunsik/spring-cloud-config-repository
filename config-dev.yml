@@ -4,16 +4,26 @@
 #  pwd: '{cipher}d72cb5b3ae6cd350d1e4f2e58f6fe5ab85329060cf126356c43b166c1dade707'
 spring:
   datasource:
-    driverClassName: org.h2.Driver
-    #password: ENC(SIdxOSVy6APkNDemmgHTcw3fZVdFTFGy)
-    password: '{cipher}5c34cf47a22616bb228e503efb5fe0397cb03e6a7006e532b3797f3c7ba93fcd'
+    driverClassName: org.h2.Driver    
     url: jdbc:h2:file:./testdb
     username: sa
+    #password: ENC(SIdxOSVy6APkNDemmgHTcw3fZVdFTFGy)
+    password: '{cipher}5c34cf47a22616bb228e503efb5fe0397cb03e6a7006e532b3797f3c7ba93fcd'
+  config:
+    import: "configserver:http://localhost:8088"
+  cloud:
+    config:
+      name: config # config name
+      profile: dev # config profile
 management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        #include: refresh
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true 
   h2:
     console:
       enabled: true
