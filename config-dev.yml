@@ -1,4 +1,26 @@
-taeng:
-  profile: I'm dev taeng
-  comment: Hello! updated by Spring Bus with webhook!!
-  pwd: '{cipher}d72cb5b3ae6cd350d1e4f2e58f6fe5ab85329060cf126356c43b166c1dade707'
+#taeng:
+#  profile: I'm dev taeng
+#  comment: Hello! updated by Spring Bus with webhook!!
+#  pwd: '{cipher}d72cb5b3ae6cd350d1e4f2e58f6fe5ab85329060cf126356c43b166c1dade707'
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    password: ENC(SIdxOSVy6APkNDemmgHTcw3fZVdFTFGy)
+    url: jdbc:h2:file:./testdb
+    username: sa
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+  h2:
+    console:
+      enabled: true
+      path: /h2-ui
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
