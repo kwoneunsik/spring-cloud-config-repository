@@ -17,4 +17,7 @@ spring:
         dialect: org.hibernate.dialect.H2Dialect
     show-sql: true
 
+taeng:
+  profile: I'm test taeng
+  comment: Hello! test taeng1
   
