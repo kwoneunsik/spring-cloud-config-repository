@@ -20,5 +20,5 @@ spring:
 taeng:
   profile: I'm test taeng
   comment: Hello! test taeng1
-  pwd: password: '{cipher}5c34cf47a22616bb228e503efb5fe0397cb03e6a7006e532b3797f3c7ba93fcd'
+  pwd: '{cipher}5c34cf47a22616bb228e503efb5fe0397cb03e6a7006e532b3797f3c7ba93fcd'
   
